@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews by Arnav | Coming Soon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00c6ff55, 0 0 20px #0072ff44;
+      }
+      to {
+        text-shadow: 0 0 20px #00c6ffaa, 0 0 40px #0072ffaa;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+      margin-top: 10px;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .loader {
+      margin: 40px 0;
+      width: 70px;
+      height: 70px;
+      border: 6px solid rgba(255,255,255,0.2);
+      border-top-color: #00c6ff;
+      border-radius: 50%;
+      animation: spin 1.3s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+
+    .footer a {
+      color: #00c6ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Reviews by Arnav</h1>
+  <p class="subtitle">
+    Your one-stop hub for honest ratings, streaming info & recommendations across Bollywood, Hollywood, Anime and more.
+  </p>
+  <div class="loader"></div>
+  <p class="subtitle">Our website is currently under development.<br>Stay tuned — launching soon!</p>
+
+  <div class="footer">
+    © 2025 Reviews by Arnav | Follow updates on 
+    <a href="https://www.instagram.com/darealarnav" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+</body>
+</html>
