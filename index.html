@@ -15,42 +15,54 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      overflow: hidden;
       flex-direction: column;
       text-align: center;
+      color: #fff;
       padding: 20px;
     }
 
+    /* Background image + blur overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("aff06fb3660a32e8f90bde5c46d3c80f.jpg") center/cover no-repeat;
+      filter: blur(20px) brightness(60%);
+      transform: scale(1.1);
+      z-index: -1;
+    }
+
+    /* Title with color fade animation */
     .title {
       font-size: 2.8rem;
       font-weight: 700;
       letter-spacing: 1.5px;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      background: linear-gradient(270deg, #00c6ff, #ff0080, #ffc107, #00ff6a, #00c6ff);
+      background-size: 800% 800%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: glow 2.5s ease-in-out infinite alternate;
+      animation: gradientShift 8s ease infinite;
     }
 
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #00c6ff55, 0 0 20px #0072ff44;
-      }
-      to {
-        text-shadow: 0 0 20px #00c6ffaa, 0 0 40px #0072ffaa;
-      }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .subtitle {
       font-size: 1.1rem;
-      color: #dcdcdc;
+      color: #e0e0e0;
       margin-top: 10px;
-      max-width: 500px;
+      max-width: 550px;
       line-height: 1.5;
     }
 
